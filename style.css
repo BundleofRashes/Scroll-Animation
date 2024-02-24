@@ -1,0 +1,126 @@
+html{
+	/* Set height of the html page to 100% of the browser height */
+	height: 100%;
+	/* Hide horizontal scroll */
+	overflow-x: hidden;
+	font-family: 'Helvetica', sans-serif;
+}
+
+body{
+	/* Set height of the body to 100% -- separated out of html to allow scrollTo animation */
+	height: 100%;
+	margin: 0px;
+}
+
+/* 
+Navigation Bar 
+*/
+#nav{
+	/* Fix navigation bar at the top middle of the web page */
+    position: fixed;
+    /* calc() CSS function calculates numbers of different units */
+    left: calc(50% - 50px);
+    top: 20px;
+    /* Display nav bar on top of everything else */
+    z-index: 1;
+}
+
+.nav-btn{
+	width: 20px;
+    height: 20px;
+    /* Make square div into a circle */
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid black;
+    display: inline-block;
+    cursor: pointer;
+    /* transition changes in background-color */
+    transition: background-color 0.5s;
+}
+
+/* When a nav-btn is hovered on, set background-color to black */
+.nav-btn:hover{
+	background-color: black;
+}
+
+/* 
+Cat Div
+*/
+#bunny-div{
+	/* Fix cat div in the bottom left corner of the web page */
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 300px;
+	text-align: center;
+}
+
+#bunny{
+	width: 300px;
+	margin-top: 18px;
+}
+
+#bunny-text{
+	color: white;
+	background-color: black;
+	font-size: 32px;
+}
+
+/* 
+Parallax: Mountain and Ocean sections;
+*/
+#friends, #nofriends, #sleep, #staring, #brokencam, #reflection {
+    height: 100%; /* Ensure the container takes up the full height of its parent */
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    overflow: visible; /* Allow the images to extend beyond the container boundaries */
+}
+
+
+#friends{
+	/* Set background image of mountain section using url() function */
+	background-image: url('Friends.png');
+}
+
+#nofriends{
+	/* Set background image of ocean section using url() function */
+	background-image: url('Nofriends.png');
+}
+
+#sleep{
+	/* Set background image of ocean section using url() function */
+	background-image: url('sleep.png');
+}
+
+#staring{
+	/* Set background image of ocean section using url() function */
+	background-image: url('Staring.png');
+}
+
+#brokencam{
+	/* Set background image of ocean section using url() function */
+	background-image: url('Brokencam.png');
+}
+
+#reflection{
+	/* Set background image of reflection section using url() function */
+	background-image: url('Reflection.png');
+}
+
+
+
+/* 
+Text sections after Mountain and Ocean sections
+*/
+.text-section{
+	/* Center text in the middle of browser using flexbox */
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.text{
+	width: 70%;
+}
